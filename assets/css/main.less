@@ -1,0 +1,143 @@
+@title-text: #262626;
+@body-text: #7b7b79;
+@main-color: #473c33;
+@secondary-color: #fec868;
+@accent-color: #8d9f5e;
+*{
+  box-sizing: border-box;
+}
+/* Container */
+.container{
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+body{
+  margin: 0;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  color: @body-text;
+  line-height: 1.6;
+}
+.button-o{
+  border: 2px solid @accent-color;
+  padding: 17px 22px;
+  text-transform: uppercase;
+  color: @accent-color;
+}
+.button{
+  border: none;
+  padding: 25px 45px;
+  text-transform: uppercase;
+  background-color: @accent-color;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 99;
+  &-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+  }
+  &__mobile, &__vast{
+    text-align: right;
+  }
+  &__phone{
+    display: block;
+    font-size: 19px;
+    text-decoration: none;
+    color: @title-text;
+    font-weight: 700;
+  }
+  &__small-text{
+    display: block;
+    text-decoration: none;
+    color: @body-text;
+  }
+  .menu{
+    position: fixed;
+    z-index: -1;
+    top: 80px;
+    width: 100%;
+    left: 0;
+    padding: 16px 0;
+    background-color: @main-color;
+    transition: 0.2s;
+    transform: translateY(-100%);
+    &_active{
+      transform: translateY(0);
+    }
+    &__nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__link{
+      text-decoration: none;
+      font-size: 17px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    &-button{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      border-right: 1px solid @main-color;
+      border-left: 1px solid @main-color;
+      height: 80px;
+      width: 70px;
+      &__line{
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: @secondary-color;
+        margin: 2px 0;
+      }
+    }
+  }
+
+  .logo{
+    &__text{
+      display: block;
+      font-size: 18px;
+      color: @title-text;
+      text-transform: uppercase;
+    }
+    &__description{
+      display: block;
+      color: @body-text;
+    }
+  }
+}
+
+.hero{
+  background: #f1f1f1 url("../images/hero-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 320px;
+  padding-bottom: 270px;
+  &__title{
+    max-width: 262px;
+    font-size: 30px;
+    color: @title-text;
+    margin-bottom: 0;
+  }
+  &__subtitle{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+}
