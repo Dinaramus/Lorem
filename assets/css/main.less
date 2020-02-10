@@ -1,3 +1,4 @@
+@import "normalize.css";
 @title-text: #262626;
 @body-text: #7b7b79;
 @main-color: #473c33;
@@ -13,6 +14,10 @@
   padding: 0 15px;
   margin: 0 auto;
 }
+@mobile-sm: ~"(max-width: 575px)";
+@mobile: ~"(max-width: 770px)";
+@tablet: ~"(max-width: 990px)";
+@notebook: ~"(max-width: 1230px)";
 body{
   margin: 0;
   font-family: 'PT Sans', sans-serif;
@@ -25,6 +30,10 @@ body{
   padding: 17px 22px;
   text-transform: uppercase;
   color: @accent-color;
+  background-color: #fff;
+  @media @mobile{
+    font-size: 10px;
+  }
 }
 .button{
   border: none;
@@ -34,6 +43,63 @@ body{
   color: #fff;
   letter-spacing: 2px;
   font-weight: 700;
+}
+.menu{
+  position: fixed;
+  z-index: 0;
+  top: 80px;
+  width: 100%;
+  left: 0;
+  padding: 16px 0;
+  background-color: @main-color;
+  transition: 0.2s;
+  transform: translateY(-200%);
+  @media @mobile{
+    top: 60px;
+    //transform: translateY(0);
+  }
+  &_active{
+    transform: translateY(0);
+  }
+  &__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media @mobile{
+      //flex-direction:column;
+    }
+  }
+  &__link{
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    @media @mobile{
+      margin-bottom: 20px;
+    }
+  }
+  &-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid @body-text;
+    border-left: 1px solid @body-text;
+    height: 80px;
+    width: 70px;
+    @media @mobile{
+      height: 60px;
+    }
+    &__line{
+      display: block;
+      width: 20px;
+      height: 3px;
+      background-color: @secondary-color;
+      margin: 2px 0;
+    }
+  }
 }
 .navbar {
   position: fixed;
@@ -46,10 +112,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 90px;
+    //min-height: 90px;
   }
   &__mobile, &__vast{
     text-align: right;
+    @media @tablet{
+      display: none;
+    }
   }
   &__phone{
     display: block;
@@ -63,54 +132,11 @@ body{
     text-decoration: none;
     color: @body-text;
   }
-  .menu{
-    position: fixed;
-    z-index: -1;
-    top: 80px;
-    width: 100%;
-    left: 0;
-    padding: 16px 0;
-    background-color: @main-color;
-    transition: 0.2s;
-    transform: translateY(-100%);
-    &_active{
-      transform: translateY(0);
-    }
-    &__nav{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    &__link{
-      text-decoration: none;
-      font-size: 17px;
-      text-transform: uppercase;
-      color: #fff;
-    }
-    &-button{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: transparent;
-      border: none;
-      border-right: 1px solid @main-color;
-      border-left: 1px solid @main-color;
-      height: 80px;
-      width: 70px;
-      &__line{
-        display: block;
-        width: 20px;
-        height: 3px;
-        background-color: @secondary-color;
-        margin: 2px 0;
-      }
-    }
-  }
 
   .logo{
     &__text{
       display: block;
+      //margin-bottom: 5px;
       font-size: 18px;
       color: @title-text;
       text-transform: uppercase;
@@ -119,14 +145,21 @@ body{
       display: block;
       color: @body-text;
     }
+    @media @mobile{
+      display: none;
+    }
   }
 }
 
 .hero{
-  background: #f1f1f1 url("../images/hero-bg.jpg") no-repeat center;
-  background-size: cover;
-  padding-top: 320px;
+  background: #f1f1f1 url("../images/hero-bg.jpg") no-repeat right top 65px;
+  background-size: contain;
+  padding-top: 180px;
   padding-bottom: 270px;
+  @media @mobile{
+    background-size: cover;
+    background-position: top left 40%;
+  }
   &__title{
     max-width: 262px;
     font-size: 30px;
