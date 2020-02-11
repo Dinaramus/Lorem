@@ -9,61 +9,111 @@
 	<title>Lorem</title>
 </head>
 <body>
-<header class="header">
-	<div class="menu menu_active">
-		<div class="container">
-			<nav class="menu__nav">
-				<a href="#" class="menu__link">Home</a>
-				<a href="#" class="menu__link">Keukens</a>
-				<a href="#" class="menu__link">Apparatuur</a>
-				<a href="#" class="menu__link">Aanbiedingen</a>
-				<a href="#" class="menu__link">Renovaties</a>
-				<a href="#" class="menu__link">Fornuizen</a>
-				<a href="#" class="menu__link">Contacts</a>
-			</nav>
-		</div>
-		<!-- /.container -->
-	</div>
-	<!-- /.menu -->
-	<div class="navbar">
-		<div class="container">
-			<div class="navbar-wrap">
-				<button class="menu-button navbar__menu-button">
-					<span class="menu-button__line"></span>
-					<span class="menu-button__line"></span>
-					<span class="menu-button__line"></span>
-				</button>
-				<div class="logo navbar__logo">
-					<strong class="logo__text">Lorem Ipsum</strong>
-					<span class="logo__description">Bekijk de aanbiedingen</span>
-				</div>
-				<!-- /.logo navbar__logo -->
-				<div class="navbar__mobile">
-					<a class="navbar__phone" href="tel:+31612345678">+31 612 34 56 78</a>
-					<span class="navbar__openingstijd navbar__small-text">Ma-Za: 10:00-20:00</span>
-				</div>
-				<div class="navbar__vast">
-					<a class="navbar__phone" href="tel:+31622245699">+31 622 24 56 99</a>
-					<a class="navbar__email navbar__small-text" href="mailto:info@mail.nl">info@mail.nl</a>
-				</div>
-				<button class="button-o navbar__button">Neem een contact</button>
-
+	<header class="header">
+		<div class="menu menu_active">
+			<div class="container">
+				<nav class="menu__nav">
+					<a href="#" class="menu__link">Home</a>
+					<a href="#" class="menu__link">Keukens</a>
+					<a href="#" class="menu__link">Apparatuur</a>
+					<a href="#" class="menu__link">Aanbiedingen</a>
+					<a href="#" class="menu__link">Renovaties</a>
+					<a href="#" class="menu__link">Fornuizen</a>
+					<a href="#" class="menu__link">Contacts</a>
+				</nav>
 			</div>
-			</div>
-		<!-- /.container -->
-	</div>
-	<!-- /.navbar -->
-	<div class="hero">
-		<div class="container">
-			<h1 class="hero__title">TIJD VOOR EEN UNIEKE KEUKEN?</h1>
-			<span class="hero__subtitle">vanaf 100 euro/m2</span>
-			<button class="button hero__button">Afspraak maken</button>
+			<!-- /.container -->
 		</div>
-		<!-- /.container -->
-	</div>
-	<!-- /.hero -->
-</header>
-<!-- /.header -->
+		<!-- /.menu -->
+		<div class="navbar">
+			<div class="container">
+				<div class="navbar-wrap">
+					<button class="menu-button navbar__menu-button">
+						<span class="menu-button__line"></span>
+						<span class="menu-button__line"></span>
+						<span class="menu-button__line"></span>
+					</button>
+					<div class="logo navbar__logo">
+						<strong class="logo__text">Lorem Ipsum</strong>
+						<span class="logo__description">Bekijk de aanbiedingen</span>
+					</div>
+					<!-- /.logo navbar__logo -->
+					<div class="navbar__mobile">
+						<a class="navbar__phone" href="tel:+31612345678">+31 612 34 56 78</a>
+						<span class="navbar__openingstijd navbar__small-text">Ma-Za: 10:00-20:00</span>
+					</div>
+					<div class="navbar__vast">
+						<a class="navbar__phone" href="tel:+31622245699">+31 622 24 56 99</a>
+						<a class="navbar__email navbar__small-text" href="mailto:info@mail.nl">info@mail.nl</a>
+					</div>
+					<button class="button-o navbar__button">Neem een contact</button>
+				</div>
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.navbar -->
+		<div class="hero">
+			<div class="container">
+				<h1 class="hero__title">TIJD VOOR EEN UNIEKE KEUKEN?</h1>
+				<span class="hero__subtitle">vanaf 100 euro/m2</span>
+				<button class="button hero__button">Afspraak maken</button>
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.hero -->
+	</header>
+	<!-- /.header -->
 
+	<main>
+		<section class="offer bg-secondary">
+			<div class="container">
+				<div class="offer__block offer-block">
+					<h2 class="offer__title">Start hier je keuken berekening</h2>
+					<span class="offer__subtitle">Profiteer van €500 korting op je droomkeuken</span>
+					<form action="#" class="form offer__form">
+						<div class="form__row">
+							<div class="form__group">
+								<label for="materiaal" class="form__label">Materiaal</label>
+								<input type="text" id="materiaal" class="input form__input">
+							</div>
+							<div class="form__group">
+								<label for="breedte" class="form__label">Breedte, cm</label>
+								<input type="text" id="breedte" class="input form__input">
+							</div>
+							<div class="form__group">
+								<label for="hoogte" class="form__label">Hoogte, cm</label>
+								<input type="text" id="hoogte" class="input form__input">
+							</div>
+						</div>
+						<div class="form__row form__row-checkbox">
+							<div class="form__checkbox">
+								<input class="checkbox" id="montage" type="checkbox">
+								<label class="checkbox-label" for="montage">Montage</label>
+							</div>
+							<div class="form__checkbox">
+								<input class="checkbox" id="bezorging" type="checkbox">
+								<label class="checkbox-label" for="bezorging">Bezorging</label>
+							</div>
+						</div>
+						<!-- /.form__row -->
+						<div class="form__row">
+							<div class="form__group">
+								<input type="text" class="form__input input" placeholder="Uw naam">
+							</div>
+							<div class="form__group">
+								<input type="tel" class="form__input input" placeholder="Uw telefoon">
+							</div>
+							<div class="form__group">
+								<input type="submit" class="button form__button" value="Korting">
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- /.offer__block offer-block -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.offer -->
+	</main>
 </body>
 </html>
