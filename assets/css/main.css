@@ -1,14 +1,15 @@
 @import "normalize.css";
+/* Grid */
 * {
   box-sizing: border-box;
 }
-/* Container */
 .container {
   width: 100%;
-  max-width: 1230px;
+  max-width: 1199px;
   padding: 0 15px;
   margin: 0 auto;
 }
+/* Interface */
 body {
   margin: 0;
   font-family: 'PT Sans', sans-serif;
@@ -16,17 +17,52 @@ body {
   color: #7b7b79;
   line-height: 1.6;
 }
+img {
+  max-width: 100%;
+}
+.section {
+  padding: 100px 0;
+}
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 770px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
+.section__title {
+  margin-bottom: 100px;
+}
+@media (max-width: 770px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+.bg-secondary {
+  background: #f1f1f1;
+}
 .button-o {
   border: 2px solid #8d9f5e;
   padding: 17px 22px;
   text-transform: uppercase;
   color: #8d9f5e;
   background-color: #fff;
+  text-decoration: none;
 }
 @media (max-width: 770px) {
   .button-o {
     font-size: 10px;
   }
+}
+.input {
+  height: 60px;
+  width: 100%;
+  padding-left: 30px;
+  border: 1px solid #dddddd;
 }
 .button {
   border: none;
@@ -36,6 +72,21 @@ body {
   color: #fff;
   letter-spacing: 2px;
   font-weight: 700;
+  text-decoration: none;
+}
+.button-fitting {
+  color: #8d9f5e;
+  background-color: #fff;
+}
+.button-add {
+  background-color: #a4b27e;
+  color: #fff;
+}
+.button-like {
+  height: 30px;
+  width: 30px;
+  background-color: #8d9f5e;
+  border: none;
 }
 .menu {
   position: fixed;
@@ -274,13 +325,133 @@ body {
   height: 60px;
   width: 100%;
 }
-.bg-secondary {
-  background: #f1f1f1;
+.features-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.input {
-  height: 60px;
+.features-block__item {
+  flex-basis: 33.333%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+@media (max-width: 990px) {
+  .features-block__item {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 770px) {
+  .features-block__item {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+}
+.catalogue {
+  background-color: #f1f1f1;
+}
+.catalogue-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1199px) {
+  .catalogue-block {
+    justify-content: center;
+  }
+}
+.catalogue-item {
+  position: relative;
+  box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1199px) {
+  .catalogue-item {
+    max-width: 470px;
+  }
+}
+.catalogue-item__buttons {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.catalogue-item__button {
+  font-size: 11px;
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  height: 30px;
+}
+.catalogue-item__tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #a4b27e;
+}
+.catalogue-item__image {
+  display: block;
+}
+.catalogue__link {
+  text-align: center;
+  margin-top: 60px;
+}
+.catalogue__link-more {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.catalogue__description {
+  display: block;
+}
+.catalogue__item {
+  margin-bottom: 40px;
+}
+.blog__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+.blog__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.blog__link-more {
+  color: #8d9f5e;
+  font-size: 16px;
+}
+.blog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1199px) {
+  .blog-list {
+    justify-content: space-around;
+  }
+}
+.blog-list__image {
+  height: 280px;
   width: 100%;
-  padding-left: 30px;
-  border: 1px solid #dddddd;
+}
+.blog-list__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+.blog-list__item {
+  margin-bottom: 40px;
+}
+@media (max-width: 1199px) {
+  .blog-list__item {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+.blog-item {
+  box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=main.css.map */

@@ -6,20 +6,23 @@
 @accent-color: #8d9f5e;
 @bg-secondary: #f1f1f1;
 @border: #dddddd;
+
+/* Grid */
 *{
   box-sizing: border-box;
 }
-/* Container */
 .container{
   width: 100%;
-  max-width: 1230px;
+  max-width: 1199px;
   padding: 0 15px;
   margin: 0 auto;
 }
 @mobile-sm: ~"(max-width: 575px)";
 @mobile: ~"(max-width: 770px)";
 @tablet: ~"(max-width: 990px)";
-@notebook: ~"(max-width: 1230px)";
+@notebook: ~"(max-width: 1199px)";
+
+/* Interface */
 body{
   margin: 0;
   font-family: 'PT Sans', sans-serif;
@@ -27,15 +30,46 @@ body{
   color: @body-text;
   line-height: 1.6;
 }
+img{
+  max-width: 100%;
+}
+.section{
+  padding: 100px 0;
+  &-title{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    @media @mobile{
+      font-size: 24px;
+    }
+  }
+  &__title{
+    margin-bottom: 100px;
+  }
+  @media @mobile{
+    padding: 60px 0;
+  }
+}
+.bg-secondary{
+  background: @bg-secondary;
+}
 .button-o{
   border: 2px solid @accent-color;
   padding: 17px 22px;
   text-transform: uppercase;
   color: @accent-color;
   background-color: #fff;
+  text-decoration: none;
   @media @mobile{
     font-size: 10px;
   }
+}
+.input{
+  height: 60px;
+  width: 100%;
+  padding-left: 30px;
+  border: 1px solid @border;
 }
 .button{
   border: none;
@@ -45,7 +79,23 @@ body{
   color: #fff;
   letter-spacing: 2px;
   font-weight: 700;
+  text-decoration: none;
+  &-fitting{
+    color: @accent-color;
+    background-color: #fff;
+  }
+  &-add{
+    background-color: lighten(@accent-color, 10%);
+    color: #fff;
+  }
+  &-like{
+    height: 30px;
+    width: 30px;
+    background-color: @accent-color;
+    border: none;
+  }
 }
+
 .menu{
   position: fixed;
   z-index: 0;
@@ -178,9 +228,7 @@ body{
     font-weight: 700;
     margin-bottom: 67px;
   }
-
 }
-
 .offer{
   padding: 129px 0;
   &__block{
@@ -265,7 +313,6 @@ body{
       margin-bottom: 20px;
     }
   }
-
   &__group{
     flex-basis: 33.333%;
     @media @mobile{
@@ -277,12 +324,126 @@ body{
     width: 100%;
   }
 }
-.bg-secondary{
-  background: @bg-secondary;
+.features{
+  &-block{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item{
+      flex-basis: 33.333%;
+      text-align: center;
+      margin-bottom: 100px;
+      @media @tablet{
+        flex-basis: 50%;
+      }
+      @media @mobile{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+      }
+    }
+  }
 }
-.input{
-  height: 60px;
-  width: 100%;
-  padding-left: 30px;
-  border: 1px solid @border;
+.catalogue{
+  background-color: @bg-secondary;
+  &-block{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media @notebook{
+      justify-content: center;
+    }
+  }
+  &-item{
+    //max-width: 508px;
+    position: relative;
+    box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+    @media @notebook{
+      max-width: 470px;
+    }
+    &__buttons{
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    &__button{
+      font-size: 11px;
+      border: none;
+      padding: 10px;
+      text-transform: uppercase;
+      height: 30px;
+    }
+    &__tag{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: lighten(@accent-color, 10%);
+    }
+    &__image{
+      display: block;
+    }
+  }
+  &__link{
+    text-align: center;
+    margin-top: 60px;
+    &-more{
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+  }
+  &__description{
+    display: block;
+  }
+
+  &__item{
+    margin-bottom: 40px;
+  }
+}
+.blog{
+  &__heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+  &__title{
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__link-more{
+    color: @accent-color;
+    font-size: 16px;
+  }
+  &-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media @notebook{
+    justify-content: space-around;
+    }
+    &__image{
+      height: 280px;
+      width: 100%;
+    }
+    &__text{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+    }
+    &__item{
+      margin-bottom: 40px;
+      @media @notebook{
+        margin-right: 30px;
+        margin-left: 30px;
+      }
+    }
+  }
+  &-item{
+    box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+  }
 }
