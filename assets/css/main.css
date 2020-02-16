@@ -74,6 +74,10 @@ img {
   font-weight: 700;
   text-decoration: none;
 }
+.button:hover {
+  cursor: pointer;
+  background-color: #fec868;
+}
 .button-fitting {
   color: #8d9f5e;
   background-color: #fff;
@@ -406,7 +410,7 @@ img {
   display: block;
 }
 .catalogue__item {
-  margin-bottom: 40px;
+  margin: 0 20px 40px 20px;
 }
 .blog__heading {
   display: flex;
@@ -429,7 +433,7 @@ img {
 }
 @media (max-width: 1199px) {
   .blog-list {
-    justify-content: space-around;
+    justify-content: center;
   }
 }
 .blog-list__image {
@@ -447,11 +451,110 @@ img {
 }
 @media (max-width: 1199px) {
   .blog-list__item {
-    margin-right: 30px;
-    margin-left: 30px;
+    margin: 30px;
   }
 }
 .blog-item {
   box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+}
+.price-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 990px) {
+  .price-block {
+    justify-content: center;
+  }
+}
+.price-block__item {
+  margin-bottom: 10px;
+}
+@media (max-width: 990px) {
+  .price-block__item {
+    margin: 20px;
+  }
+}
+.price-item {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+}
+.price-item:hover {
+  cursor: pointer;
+}
+.price-item:hover .price-item__button {
+  bottom: -80px;
+  z-index: 99;
+  background-color: #fff;
+}
+.price-item__text {
+  padding: 20px;
+}
+.price-item__title {
+  margin: 0;
+}
+.price-item__value {
+  font-weight: 700;
+}
+.price-item__pricetag {
+  display: flex;
+  justify-content: space-between;
+}
+.price-item__button {
+  text-align: center;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 20px 20px 20px;
+}
+.steps {
+  background-color: #f1f1f1;
+}
+.steps-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.steps-block .step {
+  text-align: center;
+  position: relative;
+}
+.steps-block .step:last-child:before {
+  display: none;
+}
+.steps-block .step:before {
+  content: "";
+  width: 75%;
+  height: 2px;
+  background-color: #7b7b79;
+  display: block;
+  position: absolute;
+  top: 16%;
+  right: -53%;
+}
+.steps-block .step__title {
+  font-size: 18px;
+}
+.steps-block .step__text {
+  max-width: 160px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+@media (max-width: 990px) {
+  .steps-block .step {
+    width: 33%;
+  }
+  .steps-block .step:before {
+    display: none;
+  }
+}
+@media (max-width: 770px) {
+  .steps-block .step {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
