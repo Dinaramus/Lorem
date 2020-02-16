@@ -235,19 +235,32 @@ img{
 }
 .offer{
   padding: 129px 0;
-  &__block{
-    background: #fff url("../images/form-bg.png") no-repeat center right;
-    background-size: contain;
+  &-block{
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
     padding: 80px;
     margin-top: -200px;
-    @media @tablet{
+    @media @notebook{
       background-position: center right -100px;
     }
     @media @mobile{
-      background: #fff;
       padding: 40px;
-      margin-top: -300px;
+      //margin-top: -300px;
+    }
+    &_calc-bg{
+      background: #fff url("../images/form-bg-calc.png") no-repeat center right;
+      background-size: contain;
+      @media @tablet{
+        background: none;
+        background-color: #fff;
+      }
+    }
+    &_price-bg{
+      background: #fff url("../images/form-bg-price.png") no-repeat center right;
+      background-size: contain;
+      @media @tablet{
+        background: none;
+        background-color: #fff;
+      }
     }
   }
   &__title{
@@ -261,6 +274,7 @@ img{
     display: block;
     font-size: 21px;
     margin-bottom: 45px;
+    max-width: 800px;
   }
 }
 .form{
@@ -326,6 +340,14 @@ img{
   &__button{
     height: 60px;
     width: 100%;
+  }
+  &__policy{
+    display: inline-block;
+    margin-left: 30px;
+    @media @mobile{
+      margin-top: 25px;
+      margin-left: 0;
+    }
   }
 }
 .features{
@@ -551,6 +573,63 @@ img{
       @media @mobile{
         width: 100%;
       }
+    }
+  }
+}
+.reviews{
+  background: @bg-secondary;
+  &-slider{
+    display: flex;
+    justify-content: space-between;
+    &__item{
+      text-align: center;
+    }
+    &__text{
+      position: relative;
+      font-style: italic;
+      max-width: 370px;
+      padding: 20px;
+      min-height: 130px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      &:after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: #ffffff transparent transparent transparent;
+      }
+    }
+    &__image{
+      display: block;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid @border;
+      margin: 20px auto;
+    }
+  }
+}
+.factory{
+  &-block{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__text{
+      margin-left: 70px;
+      flex-basis: 50%;
+      @media @mobile{
+        margin-left: 0;
+      }
+    }
+    &__image{
+      margin: 20px 0;
     }
   }
 }
